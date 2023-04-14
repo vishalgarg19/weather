@@ -1,0 +1,17 @@
+.weather {
+  /* margin: 100px; */
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  margin: 100px auto;
+  background-color: aquamarine;
+  max-width: 800px;
+  padding: 40px;
+}
+
+.header-text {
+  font-family: "DynaPuff", cursive;
+  color: #3a3a3a;
+  text-align: center;
+  margin-bottom: 15px;
+}
