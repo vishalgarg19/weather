@@ -1,15 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Weather.css";
 import WeatherInput from "./WeatherInput";
+import WeatherOutput from "./WeatherOutput";
+// import "../../src/api_key.dart";
 
 const Weather = () => {
-  const [city, setCity] = useState();
-  const [country, setCountry] = useState();
+  const [weather, setWeather] = useState();
+  const [output, setOutput] = useState(false);
 
-  const inputData = (cityName, countryName) => {
-    setCity(cityName);
-    setCountry(countryName);
-    console.log(city, country);
+  useEffect(() => {
+    if (weather !== undefined) {
+      setOutput(true);
+    }
+  }, [weather]);
+
+  const inputData = (data) => {
+    setWeather(data);
   };
 
   return (
@@ -18,6 +24,7 @@ const Weather = () => {
         <h1>Weather</h1>
       </div>
       <WeatherInput inputs={inputData} />
+      {output && <WeatherOutput data={weather} />}
     </div>
   );
 };

@@ -1,0 +1,27 @@
+.displayweather {
+  margin-top: 20px;
+  background-color: #ced4da;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 5px;
+  min-height: 150px;
+}
+
+.weathertitle {
+  display: block;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.weathersubtitle {
+  display: block;
+}
+
+.temp {
+  text-align: center;
+}
+
+.main h1 {
+  display: inline-block;
+  font-size: 64px;
+}
